@@ -1,0 +1,45 @@
+<div class="content-wrapper collapse show" id="collapsePanel">
+    <section class="content-header"></section>
+    <section class="content-body">
+        <!-- <div class="clearfix">
+            <div class="float-start">
+                <input type="text" class="form-control form-control-sm" data-input style="width: 100%;" />
+            </div>
+            <div class="float-end">
+                <button type="button" class="btn btn-primary btn-sm btn-momentum-1 me-3">Action One</button>
+                <button type="button" class="btn btn-primary btn-sm btn-momentum-1">Action Two</button>
+            </div>
+        </div>
+        <br>
+        <div class="clearfix">
+            <div class="example-wrapper">
+                <div class="example-header">
+                    <div class="input-group mb-3">
+                        <input type="text" id="filter-text-box" class="form-control form-control-sm" placeholder="Search" oninput="onFilterTextBoxChanged()">
+                    </div>
+                </div>
+                <ag-grid-angular
+                    style="width: 100%;height: 68vh;"
+                    class="ag-theme-alpine"
+                    [rowData]="rowData | async"
+                    [columnDefs]="columnDefs"
+                    rowSelection="multiple"
+                ></ag-grid-angular>
+            </div>
+        </div> -->
+        <div style="height: 100%; box-sizing: border-box;">
+            <ag-grid-angular
+            #agGrid
+            style="width: 100%; height: 83vh;"
+            id="myGrid"
+            class="ag-theme-alpine"
+            [columnDefs]="columnDefs"
+            [defaultColDef]="defaultColDef"
+            [defaultColGroupDef]="defaultColGroupDef"
+            [columnTypes]="columnTypes"
+            [rowData]="rowData"
+            (gridReady)="onGridReady($event)"
+            ></ag-grid-angular>
+        </div>
+    </section>
+</div>
